@@ -4,64 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的基本網頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        /* Flexbox for content section */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        /* Flexbox for images */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+        }
+        /* Flexbox for list and table */
+        .list-table-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            width: 100%;
+            max-width: 800px;
+        }
+        /* Styling the table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- 主標題 -->
-    <h1>歡迎來到我的基本網頁</h1>
+    <div class="content">
+        <!-- 主標題 -->
+        <h1>歡迎來到我的基本網頁</h1>
 
-    <!-- 副標題 -->
-    <h2>我的清單</h2>
-    
-    <!-- 無序清單 -->
-    <ul>
-        <li>項目一</li>
-        <li>項目二</li>
-        <li>項目三</li>
-    </ul>
+        <!-- 清單和表格 -->
+        <div class="list-table-container">
+            <!-- 無序清單 -->
+            <ul>
+                <li>項目一</li>
+                <li>項目二</li>
+                <li>項目三</li>
+            </ul>
 
-    <!-- 有序清單 -->
-    <ol>
-        <li>第一步</li>
-        <li>第二步</li>
-        <li>第三步</li>
-    </ol>
+            <!-- 表格 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>年齡</th>
+                        <th>職業</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>小明</td>
+                        <td>25</td>
+                        <td>工程師</td>
+                    </tr>
+                    <tr>
+                        <td>小華</td>
+                        <td>30</td>
+                        <td>設計師</td>
+                    </tr>
+                    <tr>
+                        <td>小美</td>
+                        <td>22</td>
+                        <td>學生</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-    <!-- 副標題 -->
-    <h2>我的表格</h2>
-    
-    <!-- 表格 -->
-    <table border="1">
-        <thead>
-            <tr>
-                <th>姓名</th>
-                <th>年齡</th>
-                <th>職業</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>小明</td>
-                <td>25</td>
-                <td>工程師</td>
-            </tr>
-            <tr>
-                <td>小華</td>
-                <td>30</td>
-                <td>設計師</td>
-            </tr>
-            <tr>
-                <td>小美</td>
-                <td>22</td>
-                <td>學生</td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- 副標題 -->
+        <h2>我的圖片</h2>
 
-    <!-- 副標題 -->
-    <h2>我的圖片</h2>
-
-    <!-- 圖片 -->
-    <img src="https://i.imgur.com/fQZxEeq.jpeg" alt="示例圖片" width="300">
-
+        <!-- 圖片容器 -->
+        <div class="image-container">
+            <img src="https://i.imgur.com/fQZxEeq.jpeg" alt="示例圖片1">
+            <img src="https://i.imgur.com/TVh3IrT.jpeg" alt="示例圖片2">
+            <img src="https://i.imgur.com/qN8siFS.jpeg" alt="示例圖片3">
+        </div>
+    </div>
 </body>
 </html>
